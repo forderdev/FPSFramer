@@ -1,0 +1,39 @@
+[package]
+name = "fpsframer-app"
+description = "FPSFramer desktop application (native shell around the engine)."
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+publish.workspace = true
+default-run = "fpsframer"
+
+[lib]
+name = "fpsframer_app"
+crate-type = ["rlib"]
+
+[[bin]]
+name = "fpsframer"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+fpsframer-core = { path = "../../crates/core" }
+fpsframer-platform = { path = "../../crates/platform" }
+fpsframer-engine = { path = "../../crates/engine" }
+tauri = { version = "2", features = ["tray-icon", "image-png"] }
+tauri-plugin-single-instance = "2"
+tauri-plugin-global-shortcut = "2"
+tauri-plugin-notification = "2"
+tauri-plugin-autostart = "2"
+tauri-plugin-dialog = "2"
+serde.workspace = true
+serde_json.workspace = true
+log.workspace = true
+parking_lot.workspace = true
+crossbeam-channel.workspace = true
+
+[features]
+# Tauri turns this on for production builds; keeps the dev tools out of the shipped app.
+custom-protocol = ["tauri/custom-protocol"]

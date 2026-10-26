@@ -1,0 +1,18 @@
+[package]
+name = "fpsframer-engine"
+description = "FPSFramer runtime: sampler, sessions, profiles, alerts, RPC."
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+fpsframer-core = { path = "../core" }
+fpsframer-platform = { path = "../platform" }
+serde.workspace = true
+serde_json.workspace = true
+log.workspace = true
+parking_lot.workspace = true
+crossbeam-channel.workspace = true
+thiserror.workspace = true
+base64 = "0.22"
+dirs.workspace = true

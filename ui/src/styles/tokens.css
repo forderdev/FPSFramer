@@ -1,0 +1,106 @@
+/* Design tokens. Text colours were chosen to meet WCAG AA (4.5:1) on the surfaces they sit on. */
+
+:root {
+  --font-ui: 'Inter Variable', 'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Mono', Consolas, monospace;
+
+  --accent: #3ddcff;
+  --accent-contrast: #04141a;
+
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+
+  --ok: #4ade80;
+  --warn: #fbbf24;
+  --bad: #ff7b7b;
+  --info: #7cb4ff;
+
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.25), 0 4px 14px rgb(0 0 0 / 0.18);
+  --shadow-2: 0 10px 40px rgb(0 0 0 / 0.45);
+  --focus: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
+
+  --chart-1: #3ddcff;
+  --chart-2: #ffb454;
+  --chart-3: #b79bff;
+  --chart-4: #7ee787;
+}
+
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0b0e14;
+  --bg-side: #0e121a;
+  --surface: #141925;
+  --surface-2: #1a2030;
+  --surface-3: #232b3e;
+  --border: #252d3f;
+  --border-strong: #38425a;
+  --text: #e9eef7;
+  --text-2: #adb8cc;
+  --text-3: #8592a8;
+  --accent-text: var(--accent);
+  --overlay-scrim: rgb(5 8 14 / 0.66);
+  --canvas-bg: #07090e;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f2f5fa;
+  --bg-side: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #eef2f8;
+  --surface-3: #e2e8f2;
+  --border: #dce3ee;
+  --border-strong: #b9c4d6;
+  --text: #121826;
+  --text-2: #435069;
+  --text-3: #5b6980;
+  --accent-text: color-mix(in srgb, var(--accent) 45%, #000);
+  /* Darker than the dark theme's, so they stay readable on their own 18% tinted badge backgrounds (≥ 4.5:1). */
+  --ok: #0f6a30;
+  --warn: #854a00;
+  --bad: #b32424;
+  --info: #1a55b8;
+  --shadow-1: 0 1px 2px rgb(16 24 40 / 0.06), 0 4px 14px rgb(16 24 40 / 0.06);
+  --shadow-2: 0 10px 40px rgb(16 24 40 / 0.18);
+  --overlay-scrim: rgb(20 28 44 / 0.4);
+  --canvas-bg: #cfd6e3;
+  --chart-1: #0b7da0;
+  --chart-2: #b45f06;
+  --chart-3: #6b46c1;
+  --chart-4: #1a7f37;
+}
+
+:root[data-theme='high-contrast'] {
+  color-scheme: dark;
+  --bg: #000000;
+  --bg-side: #000000;
+  --surface: #0a0a0a;
+  --surface-2: #151515;
+  --surface-3: #262626;
+  --border: #8c8c8c;
+  --border-strong: #ffffff;
+  --text: #ffffff;
+  --text-2: #f0f0f0;
+  --text-3: #d6d6d6;
+  --accent: #ffe14d;
+  --accent-contrast: #000000;
+  --accent-text: #ffe14d;
+  --ok: #5cff8a;
+  --warn: #ffd23f;
+  --bad: #ff8a8a;
+  --info: #9cc8ff;
+  --canvas-bg: #000000;
+  --chart-1: #ffe14d;
+  --chart-2: #5cff8a;
+  --chart-3: #9cc8ff;
+  --chart-4: #ff9bd0;
+}

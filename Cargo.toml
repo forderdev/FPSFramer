@@ -1,0 +1,38 @@
+[workspace]
+resolver = "2"
+members = [
+  "crates/core",
+  "crates/platform",
+  "crates/engine",
+  "crates/devserver",
+  "app/src-tauri",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.80"
+authors = ["FPSFramer contributors"]
+publish = false
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+parking_lot = "0.12"
+crossbeam-channel = "0.5"
+log = "0.4"
+flate2 = "1"
+dirs = "6"
+libloading = "0.8"
+png = "0.17"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 4
+strip = true
+panic = "unwind"
+
+[profile.dev.package."*"]
+opt-level = 1

@@ -1,0 +1,13 @@
+[package]
+name = "fpsframer-devserver"
+description = "Serves the UI and exposes the engine over HTTP for browser-based development and end-to-end tests. Not shipped in the app."
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+fpsframer-core = { path = "../core" }
+fpsframer-engine = { path = "../engine" }
+serde.workspace = true
+serde_json.workspace = true
+log.workspace = true

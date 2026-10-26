@@ -1,0 +1,45 @@
+/* The overlay window: fully transparent, no chrome, nothing selectable. */
+html.overlay-html,
+body.overlay-body {
+  background: transparent !important;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+body.overlay-body #root {
+  display: inline-block;
+}
+
+.ov-edit-frame {
+  outline: 2px dashed #3ddcff;
+  outline-offset: 2px;
+  border-radius: 8px;
+  cursor: move;
+}
+
+.ov-edit-chip {
+  display: block;
+  margin: 6px auto 0;
+  width: max-content;
+  font: 600 11px/1 'Inter Variable', 'Segoe UI', sans-serif;
+  color: #04141a;
+  background: #3ddcff;
+  padding: 4px 8px;
+  border-radius: 99px;
+}
+
+.ov-demo-chip {
+  display: block;
+  margin-top: 3px;
+  width: max-content;
+  font: 700 10px/1 'Inter Variable', 'Segoe UI', sans-serif;
+  letter-spacing: 0.08em;
+  color: #1a1100;
+  background: #fbbf24;
+  padding: 3px 7px;
+  border-radius: 99px;
+}

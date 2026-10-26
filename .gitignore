@@ -1,0 +1,11 @@
+/target
+node_modules
+ui/dist
+ui/node_modules
+app/src-tauri/target
+app/src-tauri/gen
+test-results
+playwright-report
+.fpsframer-dev
+*.log
+.DS_Store

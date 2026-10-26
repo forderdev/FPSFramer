@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "FPSFramer",
+  "version": "0.1.0",
+  "identifier": "dev.fpsframer.app",
+  "build": {
+    "frontendDist": "../../ui/dist"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' ipc: http://ipc.localhost; object-src 'none'; base-uri 'none'; frame-ancestors 'none'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.png", "icons/icon.ico"],
+    "shortDescription": "Friendly FPS and PC performance monitor",
+    "longDescription": "FPSFramer shows your frame rate, temperatures and other PC statistics over your games and records sessions with plain-language reports. Everything stays on your PC.",
+    "category": "Utility",
+    "copyright": "FPSFramer contributors",
+    "windows": {
+      "webviewInstallMode": { "type": "embedBootstrapper" },
+      "nsis": {
+        "installMode": "currentUser",
+        "displayLanguageSelector": false,
+        "languages": ["English"]
+      }
+    }
+  }
+}
